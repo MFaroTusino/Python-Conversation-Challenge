@@ -27,7 +27,7 @@ else:
     favouriteThings.append(countOfFavourites)
     countOfFavourites = countOfFavourites + 1
 
-question2 = input("Can I get to know you you a little better? ")
+question2 = input("Can I get to know you a little better? ")
 input_words=question2.lower().split()
 for word in input_words:
     if word in keywordlist:
