@@ -35,7 +35,9 @@ else:
     countOfFavourites = countOfFavourites + 1
 
 question2 = input("Can I get to know you a little better? ")
-input_words=question2.lower().split()
+question2 = question2.lower()
+question2 = re.sub(r'[^\w\s]','',question2)
+input_words=question2.split()
 for word in input_words:
     if word in keywordlist:
         keywordFound = True
