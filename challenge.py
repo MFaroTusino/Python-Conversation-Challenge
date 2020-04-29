@@ -1,21 +1,22 @@
 print("Welcome! This is Brendan's test for conditional/boolean if-else statements and in the form of a guessing game")
 
 Name = input("What is your name? ")
-print("it's a pleasure to meet you.", Name)
+print("it's a pleasure to meet you,", Name)
 
-answer = input ("Can I ask you a question? ")
+keywordlist = ("yes", "okay", "sure")
+question1 = input("Can I ask you a question? ")
+input_words=question1.lower().split()
+for word in input_words:
+    if word in keywordlist:
+        print("Fantastic!")
+    else: 
+        print("No problem - maybe next time")
+        quit()
 
-if answer.lower() == "yes" or "okay" or "sure":
-    print("Fantastic, lets proceed")
+foodname = ("ramen")
+foodname = input ("What is my favourite food? ")
 
-else: 
-    print("well that's really unfortunate")
-
-if answer.lower() == "yes" or "okay" or "sure":
-    foodname = ("ramen")
-    foodname = input ("What is my favourite food? ")
-
-if foodname == ("ramen"):
+if foodname.strip().lower() == ("ramen"):
     print("Yep! So Amazing! Great guess by the way")
 
 else:
