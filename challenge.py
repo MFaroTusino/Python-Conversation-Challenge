@@ -13,14 +13,11 @@ for word in input_words:
         print("No problem - maybe next time")
         quit()
 
-foodname = ("ramen")
-foodname = input ("What is my favourite food? ")
-
-if foodname.strip().lower() == ("ramen"):
-    print("Yep! So Amazing! Great guess by the way")
-
+foodname = input ("What is your favourite food? ")
+if foodname.lower() == "ramen":
+    print("No way! My favourite food is Ramen too!")
 else:
-    print("Yuck, that's not it")
+    print("Oh -", foodname,"! That's tasty. My favourite is Ramen")
 
 print("Anyway, thanks for playing")
 
