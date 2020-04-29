@@ -1,21 +1,28 @@
+import re
 print("Welcome! This is Brendan's test for conditional/boolean if-else statements and in the form of a guessing game")
 
 Name = input("What is your name? ")
 print("it's a pleasure to meet you,", Name)
 
+keywordFound = False
 keywordlist = ("yes", "okay", "sure")
 favouriteThings=[]
 countOfFavourites=0
 countOfSharedFavourites=0
 question1 = input("Can I ask you a question? ")
-input_words=question1.lower().split()
+question1 = question1.lower()
+question1 = re.sub(r'[^\w\s]','',question1)
+input_words=question1.split()
 for word in input_words:
     if word in keywordlist:
-        print("Fantastic!")
-    else: 
-        print("No problem - maybe next time")
-        quit()
+        keywordFound = True
+        print("Word: ",word)
 
+if(keywordFound):
+    print("YAY!")
+else:
+    print ("Okay - maybe next time")
+    quit()
 favouriteFood = input ("What is your favourite food? ")
 if favouriteFood.lower() == "ramen":
     print("No way! My favourite food is Ramen too!")
@@ -31,12 +38,16 @@ question2 = input("Can I get to know you a little better? ")
 input_words=question2.lower().split()
 for word in input_words:
     if word in keywordlist:
-        print("YAY!")
-    else: 
-        print("That's okay. Thanks for talking to me")
-        quit()
+        keywordFound = True
+        print("Word: ",word)
 
-faveColour = input("What is your favourite colour?")
+if(keywordFound):
+    print("YAY!")
+else:
+    print ("Okay - maybe next time")
+    quit()
+    
+faveColour = input("What is your favourite colour? ")
 if faveColour.lower().strip() == "purple":
     print("Okay, this is freaky! My favourite colour is Purple too")
     countOfSharedFavourites = countOfSharedFavourites + 1
