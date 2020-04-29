@@ -16,7 +16,7 @@ input_words=question1.split()
 for word in input_words:
     if word in keywordlist:
         keywordFound = True
-        print("Word: ",word)
+        #print("Word: ",word)
 
 if(keywordFound):
     print("YAY!")
@@ -41,7 +41,7 @@ input_words=question2.split()
 for word in input_words:
     if word in keywordlist:
         keywordFound = True
-        print("Word: ",word)
+        #print("Word: ",word)
 
 if(keywordFound):
     print("YAY!")
