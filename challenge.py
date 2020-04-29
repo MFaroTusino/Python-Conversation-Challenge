@@ -46,7 +46,10 @@ else:
 favouriteThings.append(faveColour)
 countOfFavourites = countOfFavourites + 1
 
-print("So it seems like now I know",countOfFavourites, "of your favourite things, and we have", countOfSharedFavourites, "favourite things in common!")
-print("That's so cool!")
+if countOfSharedFavourites > 1:
+    print("So it seems like now I know",countOfFavourites, "of your favourite things, and we have", countOfSharedFavourites, "favourite things in common!")
+    print("That's so cool!")
+else:
+    print("So it seems like now I know",countOfFavourites, "of your favourite things")
 #print("Your favourite colour is,", faveColour, "and your favourite food is,", favouriteFood)
 print("Look at this, we're learning about each other so quickly")
