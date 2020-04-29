@@ -33,7 +33,8 @@ else:
     print("Oh -", favouriteFood,"! That's tasty. My favourite is Ramen")
     favouriteThings.append(countOfFavourites)
     countOfFavourites = countOfFavourites + 1
-
+#reset the keywordFound
+keywordFound = False
 question2 = input("Can I get to know you a little better? ")
 question2 = question2.lower()
 question2 = re.sub(r'[^\w\s]','',question2)
